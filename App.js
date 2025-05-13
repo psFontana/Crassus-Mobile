@@ -11,10 +11,10 @@ export default function Corridas() {
         end={{ x: 1, y: 0 }}
         style={StyleSheet.absoluteFillObject}
       />
-      
+
       <View style={styles.content}>
         <Text style={styles.title}>Suas Corridas</Text>
-        
+
         <ScrollView contentContainerStyle={styles.scrollContainer}>
           <Text style={styles.month}>Abril</Text>
           <Item
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
   },
-  
+
   content: {
     flex: 1,
     paddingTop: 60,
@@ -94,13 +94,13 @@ const styles = StyleSheet.create({
     marginLeft: 20,
   },
   scrollContainer: {
-    flex:1,
+    flex: 1,
     paddingBottom: 80,
     paddingHorizontal: 20,
     borderRadius: 40,
     backgroundColor: '#fff',
     width: '100%',
-    marginTop: 20, 
+    marginTop: 20,
   },
   month: {
     fontSize: 25,
@@ -112,7 +112,7 @@ const styles = StyleSheet.create({
   button: {
     backgroundColor: '#f0b300',
     paddingVertical: 15,
-        borderRadius: 20,
+    borderRadius: 20,
     position: 'absolute',
     bottom: 20,
     alignSelf: 'center',
