@@ -3,12 +3,12 @@ import { View, Text, Image, StyleSheet } from 'react-native';
 export default function Item(props) {
   return (
     <View style={[styles.wrapper, props.style]}>
-      <Image source={props.iconSrc} style={styles.icon} alt={props.iconAlt} />
+      <Image source={props.iconSrc} style={[styles.icon, { tintColor: props.iconColor }]} alt={props.iconAlt} />
       <View style={styles.textContainer}>
         <Text style={styles.title}>{props.title}</Text>
         <Text style={styles.description}>{props.description}</Text>
       </View>
-      <Image source={props.actionImage} style={styles.actionIcon} alt={props.actionAlt} />
+      <Image source={props.actionImage} style={[styles.actionIcon, { tintColor: props.actionColor }]} alt={props.actionAlt} />
     </View>
   );
 }
