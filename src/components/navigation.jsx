@@ -4,9 +4,9 @@ import { NavigationContainer } from '@react-navigation/native';
 import { View, Image, Text } from 'react-native';
 
 import Corridas from '../screens/corridas.jsx';
-import Desempenho from '../screens/desempenho.jsx'; // telas placeholder
-import Mais from '../screens/mais.jsx'; // telas placeholder
-import Nutricao from '../screens/nutricao.jsx'; // telas placeholder
+import Desempenho from '../screens/desempenho.jsx';
+import Mais from '../screens/mais.jsx';
+import Nutricao from '../screens/nutricao.jsx';
 
 const Tab = createBottomTabNavigator();
 
