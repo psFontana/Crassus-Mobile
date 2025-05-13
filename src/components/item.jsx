@@ -1,12 +1,45 @@
-import styles from './styles.module.css';
+import { View, Text, Image, StyleSheet } from 'react-native';
 
 export default function Item(props) {
   return (
-    <div {...props} className={`${props.className} ${styles.wrapper}`}>
-      <img src={props.iconSrc} alt={props.iconAlt} />
-      <h1>{props.title}</h1>
-      <p>{props.description}</p>
-      <img src={props.actionImage} alt={props.actionAlt} />
-    </div>
-  )
+    <View style={[styles.wrapper, props.style]}>
+      <Image source={props.iconSrc} style={styles.icon} alt={props.iconAlt} />
+      <View style={styles.textContainer}>
+        <Text style={styles.title}>{props.title}</Text>
+        <Text style={styles.description}>{props.description}</Text>
+      </View>
+      <Image source={props.actionImage} style={styles.actionIcon} alt={props.actionAlt} />
+    </View>
+  );
 }
+
+const styles = StyleSheet.create({
+  wrapper: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
+    backgroundColor: '#eee',
+    borderRadius: 10,
+    padding: 12,
+    marginBottom: 10,
+  },
+  icon: {
+    width: 30,
+    height: 30,
+    marginRight: 12,
+  },
+  textContainer: {
+    flex: 1,
+  },
+  title: {
+    fontWeight: 'bold',
+    fontSize: 16,
+  },
+  description: {
+    color: '#555',
+  },
+  actionIcon: {
+    width: 20,
+    height: 20,
+  },
+});
